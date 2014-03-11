@@ -17,10 +17,12 @@ class redis::install inherits redis {
   }
 
   file { $working_dir:
-    ensure  => directory,
-    owner   => $user,
-    group   => $group,
-    mode    => '0750',
+    ensure       => directory,
+    owner        => $user,
+    group        => $group,
+    mode         => '0750',
+    recurse      => true,
+    recurselimit => 0,
   }
 
   package { 'redis':
