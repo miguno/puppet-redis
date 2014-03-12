@@ -191,6 +191,14 @@ _Note: The locations below may be different depending on the Redis RPM you are a
 * Enhance in-line documentation of Puppet manifests.
 * Add unit tests and specs.
 * Add Travis CI setup.
+* Decide whether to provide a default settings for `vm.overcommit_memory` (sysctl).  Currently, Redis logs the
+  following warning message:
+
+    ```
+    WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue
+    add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command
+    'sysctl vm.overcommit_memory=1' for this to take effect.
+    ```
 
 
 <a name="changelog"></a>
