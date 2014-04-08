@@ -1,5 +1,12 @@
 # Change log
 
+## 1.0.3 (April 08, 2014)
+
+IMPROVEMENTS
+
+* Remove `puppetlabs/stdlib` from `Modulefile` to decouple us from PuppetForge.
+
+
 ## 1.0.2 (March 11, 2014)
 
 BUG FIXES:
