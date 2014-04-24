@@ -6,7 +6,7 @@
 class redis::service inherits redis {
 
   if !($service_ensure in ['present', 'absent']) {
-    fail("service_ensure parameter must be 'present' or 'absent'")
+    fail('service_ensure parameter must be "present" or "absent"')
   }
 
   if $service_manage == true {
@@ -35,7 +35,7 @@ class redis::service inherits redis {
         user        => 'root',
         refreshonly => true,
         subscribe   => File[$config],
-        onlyif      => "which supervisorctl &>/dev/null",
+        onlyif      => 'which supervisorctl &>/dev/null',
         require     => Class['::supervisor'],
       }
     }
