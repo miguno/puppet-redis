@@ -25,7 +25,7 @@ class redis::service inherits redis {
         stdout_logfile_keep    => $service_stdout_logfile_keep,
         stderr_logfile_maxsize => $service_stderr_logfile_maxsize,
         stderr_logfile_keep    => $service_stderr_logfile_keep,
-        require                => [ Class['redis::install'], Class['redis::config'], Class['::supervisor'] ],
+        require                => [ Class['redis::config'], Class['::supervisor'] ],
     }
 
     if $service_enable == true {
