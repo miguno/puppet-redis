@@ -25,6 +25,7 @@ class redis::params {
   $user_description    = 'Redis system account'
   $user_ensure         = 'present'
   $user_home           = '/home/redis'
+  $user_manage         = true
   $user_managehome     = true
   $working_dir         = '/app/redis'
 }

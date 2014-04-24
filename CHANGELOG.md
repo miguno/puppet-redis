@@ -1,8 +1,10 @@
 # Change log
 
-## 1.0.4 (unreleased)
+## 1.0.4 (April 24, 2014)
 
-* TBD
+IMPROVEMENTS
+
+* Add `$user_manage` parameter to enable/disable user and group management.
 
 
 ## 1.0.3 (April 08, 2014)

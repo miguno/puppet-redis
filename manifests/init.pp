@@ -25,6 +25,7 @@ class redis (
   $user_description    = $redis::params::user_description,
   $user_ensure         = $redis::params::user_ensure,
   $user_home           = $redis::params::user_home,
+  $user_manage         = hiera('redis::user_manage', $redis::params::user_manage),
   $user_managehome     = hiera('redis::user_managehome', $redis::params::user_managehome),
   $working_dir         = $redis::params::working_dir,
 ) inherits redis::params {
@@ -59,9 +60,11 @@ class redis (
   validate_string($user_description)
   validate_string($user_ensure)
   validate_absolute_path($user_home)
+  validate_bool($user_manage)
   validate_bool($user_managehome)
   validate_absolute_path($working_dir)
 
+  include '::redis::users'
   include '::redis::install'
   include '::redis::config'
   include '::redis::service'
@@ -72,6 +75,10 @@ class redis (
   anchor { 'redis::begin': }
   anchor { 'redis::end': }
 
-  Anchor['redis::begin'] -> Class['::redis::install'] -> Class['::redis::config']
-    ~> Class['::redis::service'] -> Anchor['redis::end']
+  Anchor['redis::begin']
+  -> Class['::redis::users']
+  -> Class['::redis::install']
+  -> Class['::redis::config']
+  ~> Class['::redis::service']
+  -> Anchor['redis::end']
 }
