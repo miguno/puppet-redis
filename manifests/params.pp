@@ -6,7 +6,7 @@ class redis::params {
   $group               = 'redis'
   $group_ensure        = 'present'
   $package_name        = 'redis'
-  $package_ensure      = 'latest'
+  $package_ensure      = 'present'
   $port                = 6379
   $service_autorestart = true
   $service_enable      = true

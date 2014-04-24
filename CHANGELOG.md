@@ -6,6 +6,10 @@ IMPROVEMENTS
 
 * Add `$user_manage` parameter to enable/disable user and group management.
 
+BACKWARDS INCOMPATIBILITIES
+
+* Change default value of `$package_ensure` from "latest" to "present".
+
 
 ## 1.0.3 (April 08, 2014)
 
