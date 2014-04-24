@@ -1,3 +1,5 @@
+# == Class redis::config
+#
 class redis::config inherits redis {
 
   file { $config:

@@ -1,3 +1,5 @@
+# == Class redis::params
+#
 class redis::params {
   $command             = 'redis-server'
   $config              = '/etc/redis/redis.conf'

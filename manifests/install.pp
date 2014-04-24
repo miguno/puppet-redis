@@ -1,3 +1,5 @@
+# == Class redis::install
+#
 class redis::install inherits redis {
 
   package { 'redis':

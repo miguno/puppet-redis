@@ -1,3 +1,9 @@
+# == Class redis
+#
+# === Parameters
+#
+# TODO: Document each class parameter.
+#
 class redis (
   $command             = $redis::params::command,
   $config              = $redis::params::config,
