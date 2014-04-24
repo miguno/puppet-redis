@@ -1,5 +1,10 @@
 # Change log
 
+## 1.0.5 (unreleased)
+
+* TBD
+
+
 ## 1.0.4 (April 24, 2014)
 
 IMPROVEMENTS
