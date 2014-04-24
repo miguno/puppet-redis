@@ -1,4 +1,4 @@
-# puppet-redis
+# puppet-redis [![Build Status](https://travis-ci.org/miguno/puppet-redis.png?branch=master)](https://travis-ci.org/miguno/puppet-redis)
 
 [Wirbelsturm](https://github.com/miguno/wirbelsturm)-compatible [Puppet](http://puppetlabs.com/) module to deploy
 [Redis](http://redis.io).
@@ -199,8 +199,7 @@ _Note: The locations below may be different depending on the Redis RPM you are a
 * Make configuring Redis more flexible by introducing a `$config_map` parameter, similar to how
   [puppet-kafka](https://github.com/miguno/puppet-kafka) works.
 * Enhance in-line documentation of Puppet manifests.
-* Add unit tests and specs.
-* Add Travis CI setup.
+* Add more unit tests and specs.
 * Decide whether to provide a default setting for `vm.overcommit_memory` (sysctl).  Currently, Redis logs the
   following warning message:
     ```

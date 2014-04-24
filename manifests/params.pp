@@ -28,4 +28,12 @@ class redis::params {
   $user_manage         = true
   $user_managehome     = true
   $working_dir         = '/app/redis'
+
+  case $::osfamily {
+    'RedHat': {}
+
+    default: {
+      fail("The ${module_name} module is not supported on a ${::osfamily} based system.")
+    }
+  }
 }
