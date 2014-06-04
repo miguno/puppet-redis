@@ -2,7 +2,7 @@
 
 ## 1.0.5 (unreleased)
 
-* TBD
+* bootstrap: Use new GitHub.com URL for retrieving raw user content.
 
 
 ## 1.0.4 (April 24, 2014)
